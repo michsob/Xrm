@@ -80,7 +80,7 @@ namespace Xrm.Presentation.RestApi.DISetup
 
     public class ApiControllersInstaller : IWindsorInstaller
     {
-        public void Install(Castle.Windsor.IWindsorContainer container,
+        public void Install(IWindsorContainer container,
         Castle.MicroKernel.SubSystems.Configuration.IConfigurationStore store)
         {
             container.Register(Classes.FromThisAssembly()

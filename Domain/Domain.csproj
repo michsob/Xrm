@@ -43,6 +43,7 @@
     <Compile Include="Contact\Contact.cs" />
     <Compile Include="Contact\ContactService.cs" />
     <Compile Include="Contact\IContactService.cs" />
+    <Compile Include="DataAccessBase\ICrmUnitOfWork.cs" />
     <Compile Include="DataAccessBase\IPersistRepository.cs" />
     <Compile Include="ModelBase\EntityBase.cs" />
     <Compile Include="ModelBase\EntityBaseReference.cs" />

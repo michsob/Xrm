@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.Transactions;
 using Xrm.Domain.DataAccessBase;
 using Xrm.Domain.ModelBase;
@@ -53,9 +49,9 @@ namespace Xrm.Infrastructure.DataAccess.Sql
             }
         }
 
-        public IEnumerable<Guid> CommitEnumerable()
-        {
-            throw new NotImplementedException();
-        }
+        //public IEnumerable<Guid> CommitEnumerable()
+        //{
+        //    throw new NotImplementedException();
+        //}
     }
 }

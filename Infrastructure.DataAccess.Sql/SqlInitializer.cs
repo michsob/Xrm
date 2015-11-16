@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Xrm.Infrastructure.DataAccess.Sql.Models;
 
 namespace Xrm.Infrastructure.DataAccess.Sql
 {
-    public class SqlInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<LegacyContext>
+    public class SqlInitializer : System.Data.Entity.DropCreateDatabaseIfModelChanges<SqlContext>
     {
-        protected override void Seed(LegacyContext context)
+        protected override void Seed(SqlContext context)
         {
             var accounts = new List<Account>
             {
@@ -23,10 +20,10 @@ namespace Xrm.Infrastructure.DataAccess.Sql
 
             var contacts = new List<Contact>
             {
-                new Contact {ContactId = Guid.NewGuid(), Firstname = "Yan", Lastname = "Norman", AcountId = accounts[1].AccountId},
-                new Contact {ContactId = Guid.NewGuid(), Firstname = "John", Lastname = "Alonso", AcountId = accounts[1].AccountId},
-                new Contact {ContactId = Guid.NewGuid(), Firstname = "Anna", Lastname = "Smith", AcountId = accounts[2].AccountId},
-                new Contact {ContactId = Guid.NewGuid(), Firstname = "Arthur", Lastname = "Anand", AcountId = accounts[3].AccountId}
+                new Contact {ContactId = Guid.NewGuid(), Firstname = "Yan", Lastname = "Norman", Email = "yan@abc.com", AcountId = accounts[1].AccountId},
+                new Contact {ContactId = Guid.NewGuid(), Firstname = "John", Lastname = "Alonso", Email = "john@abc.com", AcountId = accounts[1].AccountId},
+                new Contact {ContactId = Guid.NewGuid(), Firstname = "Anna", Lastname = "Smith", Email = "anna@abc.com", AcountId = accounts[2].AccountId},
+                new Contact {ContactId = Guid.NewGuid(), Firstname = "Arthur", Lastname = "Anand", Email = "arthur@abc.com", AcountId = accounts[3].AccountId}
             };
             contacts.ForEach(c => context.Contacts.Add(c));
             context.SaveChanges();

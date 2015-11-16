@@ -10,7 +10,7 @@ using Xrm.Domain.ModelBase;
 
 namespace Xrm.Infrastructure.DataAccess.Crm
 {
-    public class CrmUnitOfWork : IUnitOfWork
+    public class CrmUnitOfWork : ICrmUnitOfWork
     {
         private readonly IOrganizationService _service;
         private readonly int _batchSize;

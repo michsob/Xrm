@@ -37,10 +37,5 @@ namespace Xrm.Domain.DataAccessBase
         public abstract void PersistAdded(EntityBase entity);
         public abstract void PersistUpdated(EntityBase entity);
         public abstract void PersistRemoved(EntityBase entity);
-
-        //public void Remove(EntityBaseReference entityReference)
-        //{
-        //    _unitOfWork.RegisterDeleted(entityReference, null);
-        //}
     }
 }

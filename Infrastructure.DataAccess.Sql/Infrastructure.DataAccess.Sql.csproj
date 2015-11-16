@@ -51,15 +51,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ContactRepository.cs" />
+    <Compile Include="Mapping\SqlMapper.cs" />
     <Compile Include="Models\Acount.cs" />
     <Compile Include="Models\Contact.cs" />
-    <Compile Include="LegacyContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SqlContext.cs" />
     <Compile Include="SqlInitializer.cs" />
     <Compile Include="SqlUnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="App.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
